@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>要素を増やしたり減らしたり</title>
+</head>
+
+<body>
+    <header>
+        <h1>要素を増やしたり減らしたりします。</h1>
+    </header>
+    <main>
+        <section>
+            <div class="table">
+                <div class="tr000 tr">
+                    <div class="td000 td">
+                        <form>
+                            <input type="button" name="createbyid" value="getElementById" onclick="gebid()">
+                            <input type="button" name="idDel" value="DelById" onclick="gebiddel()">
+                        </form>
+                    </div>
+                    <div class="td001 td">
+                        <form>
+                            <input type="button" name="createbyclass" value="getElementsByClassName" onclick="gebcl()">
+                            <input type="button" name="classDel" value="DelByClass" onclick="gebcldel()">
+                        </form>
+                    </div>
+                    <div class="td002 td">
+                        <form>
+                            <input type="button" name="createbynone" value="none" onclick="gebno()">
+                            <input type="button" name="noneDel" value="DelBynone" onclick="gebnodel()">
+                        </form>
+                    </div>
+                </div>
+                <div class="tr001 tr">
+                    <div class="td011 td">
+                        <div id="target"></div>
+                    </div>
+                    <div class="td012 td">
+                        <div class="target"></div>
+                    </div>
+                    <div class="td013 td">
+
+                    </div>
+                </div>
+                <div class="tr002 tr">
+                    <div class="td023 td">
+                        <p class="text001">
+                            IDを目指して要素を追加します。<br>
+                            getElementByIdの後ろは('')("")どちらでもOKです。<br>
+                            IDなので、ElementにSは付きません。<br>                            
+                        </p>
+                    </div>
+                    <div class="td023 td">
+                        <p class="text001">クラスを目指して要素を追加します。<br>                            
+                            クラス指定の場合重要なのは変数の後に[0]を入れること。<br>
+                            これがないと複数あるクラスのどれに入れるんだ？！　となります。<br>
+                            このクラスは１つしか指定してないよ！なんてのは作る側の怠慢です。</p>
+                    </div>
+                    <div class="td023 td">
+                        <p class="text001">何もないTDにDIVを追加してその中に要素を追加します。<br>
+                            何もないと言いながら、枠自体はあるのでやってることは一緒です。<br>
+                            今回は、class"td013"に対して、DIVを作成し、クラスを付与してその中にIMGを入れています。<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="comment">
+                <p>
+                    要素を増やす・減らすという作業をするためのjavasprict記録です。<br>
+                    ボタンの装飾については、typeを指定して記述する方法を採用しています。<br>
+                    getElementsByClassNameの後ろは('') ("")どちらでもOKです。<br>
+                    ここのElementsは見逃しやすくて、コピペの際に気を付ける必要があります。<br>
+                    Idの場合はElement、ClassNameの場合はElementsになります。<br>
+                    変数.remove();では、指定したIDタグそのものを消します。<br>
+                    変数.querySelector("img").remove();を使って、targetの下のタグを直接消しています。<br>
+                    他にも、変数.removeChild(変数.firstElementChild);で指定したその中の最初の要素だけを消せます。<br>
+                    クラス指定の場合は変数の後にそのクラスのｘ番目かを指定する[x]を忘れないように（０からカウントする）<br>
+                
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2>Ryohei_Nakano</h2>
+    </footer>
+    <script src="./script/jquery-3.7.1.min.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
